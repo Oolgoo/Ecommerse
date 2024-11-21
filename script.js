@@ -126,12 +126,14 @@ currentProductSizes.forEach((size, index) => {
 });
 
 const productButton = document.querySelector('.productButton');
-const payment = document.querySelector('.payment');
 const close = document.querySelector('.close');
 
 productButton.addEventListener('click', () => {
-  payment.style.display = 'flex';
+  // Open the Google Form in a new tab/window
+  window.open('https://docs.google.com/forms/d/e/1FAIpQLSc-g_XY3uWnisFbAC7i9zLYJKDwjoH2kgbQg2C1rp_Khe9zUQ/viewform', '_blank');
 });
+
 close.addEventListener('click', () => {
+  // Close the form/modal if it was opened (not needed for this solution)
   payment.style.display = 'none';
 });
